@@ -1,0 +1,783 @@
+:root {
+    --staatliches-font: 'Staatliches', sans-serif;
+    --natosans-font: 'Nato Sans', sans-serif;
+
+    --green-color: #418043;
+    --green-light-color: #31ba33;
+
+    --red-color: #ff0000;
+
+    --orange-color: #fcb900;
+
+    --white-color: #ffffff;
+
+}
+
+/* ////////////////RESET/////////////////////// */
+html, body {
+    line-height: 1;
+    height: 100%;
+
+}
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+img {
+    height: auto;
+    vertical-align: top;
+}
+
+body {
+    font-family: var(--staatliches-font);
+}
+
+p::selection,
+span::selection,
+a::selection,
+strong::selection,
+div::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection {
+    background-color: var(--green-color);
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*HEADER*/
+.header {
+    background-color: var(--white-color);
+    z-index: 5;
+}
+
+.header__container {
+    height: 6.875rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.header__logo {
+    position: relative;
+    height: 90%;
+}
+
+.header__logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .header__container {
+        height: 4.375rem;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+}
+
+/*MAIN SECTION*/
+
+
+.main-section__background {
+    height: 120vh;
+    background-image: url('https://thestaub.com/wp-content/uploads/2023/11/Staub-cocotte-4-qt-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-section__background-color {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+}
+
+.main-section__container {
+    color:var(--white-color);
+    height: 100%;
+}
+
+.main-section__content-wrapper {
+    max-width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.main-section__title {
+    font-size: 5.65rem;
+    line-height: 1.2;
+}
+
+.main-section__text {
+    font-family: var(--natosans-font);
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.button {
+    height: 3.75rem;
+    padding: 16px 35px;
+    background-color: var(--green-color);
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--green-light-color);
+}
+
+.main-section__button {
+    font-size: 23px;
+}
+
+.button__text {
+    font-family: var(--natosans-font);
+    font-size: 1rem;
+}
+
+.main-section__features {
+
+
+}
+
+.main-section__features-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: -4rem;
+    margin-bottom: 4.375rem;
+}
+
+.feature-item {
+    background-color: #181818;
+    padding: 85px 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+
+}
+
+
+.feature-item:nth-child(2n) {
+    background-color: rgb(12, 13, 12);
+}
+
+.feature-item__title {
+    font-size: 1.875rem;
+    color: var(--orange-color);
+    text-align: center;
+
+}
+
+.feature-item__text {
+    font-family: var(--natosans-font);
+    font-size: 1rem;
+    color: var(--white-color);
+    line-height: 1.65;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .main-section__title {
+        font-size: 3.125rem;
+    }
+
+    .main-section__content-wrapper {
+        max-width: 70%;
+    }
+
+    .feature-item {
+        padding: 60px 35px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .main-section__content-wrapper {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-section__features-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* SECTION HEADING */
+
+.section-heading {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 45px;
+    color: #0c0d0c;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.section-subtitle {
+    font-family: var(--natosans-font);
+    font-size: 1.125rem;
+    color: #0a2117;
+    line-height: 1.625;
+}
+
+/* cookware*/
+.cookware__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4.375rem;
+    width: 100%;
+}
+
+.cookware-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: #f2f7f6;
+    padding: 75px 65px;
+    text-align: center;
+}
+
+.cookware-item_image {
+    width: 100%;
+    height: auto
+}
+
+.cookware-item__title {
+    font-size: 1.875rem;
+    color: #0c0d0c;
+    text-transform: uppercase;
+
+}
+
+.cookware-item__text {
+    font-family: var(--natosans-font);
+    font-size: 1rem;
+    color: #1e1e1e;
+    line-height: 1.65;
+    flex: 1;
+}
+
+.cookware-item__button-text {
+    font-size: 1.125rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .cookware__items {
+        padding: 60px 35px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cookware__items {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*VIDEO*/
+.video {
+    background-color: black;
+    background-image: url("https://thestaub.com/wp-content/uploads/2022/07/vegetables-background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.video__dark-bg {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+}
+
+.video__container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    color: var(--white-color);
+    text-align: center;
+    margin-bottom: 4.375rem;
+}
+
+.video__splash-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.8125rem;
+}
+
+.video__photo {
+    width: 100%;
+    height: auto;
+    min-height: 27.6875rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.video__play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.video__play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+.video__title {
+    font-size: 2.16rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+.video__text {
+    max-width: 50rem;
+    margin: 0 auto 3.43rem;
+    font-family: var(--natosans-font);
+    font-size: 1.25rem;
+    line-height: 1.65;
+}
+
+.video__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 2rem;
+    /*transform: scale(1);*/
+    transition: opacity 0.3s ease, z-index 0.3s ease;
+    animation: openPopup 0.3s ease;
+}
+
+.video__close-button {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+
+}
+
+.video__close-button:hover {
+    background-color: #767676;
+
+}
+
+.closed-popup {
+    display: none;
+}
+
+/* OCCASIONS */
+
+.occasions__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 4.375rem
+}
+
+.occasion-item {
+    position: relative;
+    width: 100%;
+    height: 630px;
+    z-index: 1;
+
+}
+
+.occasion-item:hover .occasion-item__image {
+    filter: brightness(0.5);
+
+}
+
+.occasion-item__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.occasion-item__content {
+    padding: 35px;
+    background-color: var(--white-color);
+    z-index: 10;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    text-align: center;
+}
+
+.occasion-item__title {
+    font-size: 1.875rem;
+    text-transform: uppercase;
+    color: rgb(12, 13, 12);
+}
+
+.occasion-item__text {
+    font-family: var(--natosans-font);
+    font-size: 1rem;
+    color: #1e1e1e;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 760px) {
+    .occasions__items {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*CLIENTS*/
+
+.clients__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 4.375rem;
+}
+
+.clients-item {
+    background-color: #f2f7f6;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.clients-item__image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.clients-item__title {
+    font-size: 1.875rem;
+    color: rgb(12, 13, 12);
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.clients-item__text {
+    line-height: 1.5;
+    font-family: var(--natosans-font);
+    font-size: 1rem;
+    color: rgb(30, 30, 30);
+    flex: 1;
+}
+
+.clients__item__name {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.clients-item__user-info {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.clients-item__role {
+    font-size: 1rem;
+    color: rgb(30, 30, 30);
+    font-family: var(--natosans-font);
+}
+
+.clients-item__icon {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+}
+
+@media screen and (max-width: 935px) {
+    .clients__items {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*SUBSCRIBE SECTION*/
+
+.subscribe__image-background {
+    background-image: url("https://thestaub.com/wp-content/uploads/2023/12/staub-cast-iron-5-qt-tall-cocotte-tout-2c4bf57a6eed40c88fea51e3ebe162d6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 31.75rem;
+}
+
+.subscribe__color-background {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.subscribe__title {
+    font-size: 2.875rem;
+    color: var(--white-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.subscribe__text {
+    max-width: 800px;
+    color: var(--white-color);
+    font-family: var(--natosans-font);
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 3.125rem;
+}
+
+.subscribe__form {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--white-color);
+    padding: 1rem 1rem 2rem 2rem;
+}
+
+.subscribe__button {
+    padding: 5px 35px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.subscribe__input-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.subscribe__input {
+    flex: 1;
+    border-bottom: 2px solid var(--green-light-color);
+    padding: 0.5rem;
+    outline: none;
+}
+
+.subscribe__input:not(:placeholder-shown) {
+    border-bottom: 2px solid var(--green-color);
+    font-size: 1rem;
+}
+
+.subscribe__success-message {;
+    font-size: 1rem;
+    font-family: var(--natosans-font);
+}
+
+.subscribe__input.error {
+    border-bottom: 2px solid var(--red-color);
+}
+
+.subscribe__error-message {
+    color: var(--red-color);
+    font-size: 0.9rem;
+    font-family: var(--natosans-font);
+}
+
+.black-block {
+    background-color: black;
+    height: 200px;
+    margin-top: -150px;
+    position: relative;
+    z-index: -1;
+}
+
+@media screen and (max-width: 690px) {
+    .subscribe__form {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.footer {
+    background-color: black;
+    background-image: url("https://thestaub.com/wp-content/uploads/2022/07/footer-vegetables-background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--white-color);
+}
+
+.footer__dark-bg {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+}
+
+
+.footer__top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 50px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.footer__logo {
+    width: 100%;
+    height: auto;
+}
+
+.footer__slogan {
+    font-size: 1.5625rem;
+    line-height: 1.5;
+}
+
+.footer__text {
+    font-family: var(--natosans-font);
+    font-size: 0.75rem;
+    color: #aaaaaa;
+    line-height: 1.5;
+}
+
+.footer__keepintouch {
+    display: flex;
+    flex-direction: column;
+    /*gap: 1.5rem;*/
+}
+
+.keepintouch__title {
+    font-size: 1.625rem;
+    line-height: 1.5;
+    margin-bottom: 1.09375rem;
+}
+
+.keepintouch__phone,
+.keepintouch__days {
+    font-family: var(--natosans-font);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--white-color);
+}
+
+.keepintouch__days {
+    margin-bottom: 1.5rem;
+}
+
+.keepintouch__available {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.keepintouch__available > img {
+    width: 100%;
+    height: auto;
+}
+
+.footer__copyright {
+    font-family: var(--natosans-font);
+    text-align: center;
+    height: 7.5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer__top {
+        grid-template-columns: 1fr;
+        text-align: center;
+        place-items: center;
+    }
+
+    .footer__logo {
+        width: 181px;
+    }
+
+    .footer__slogan {
+        max-width: 215px;
+    }
+
+    .footer__keepintouch {
+        width: 200px;
+    }
+
+}
+
+
