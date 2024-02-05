@@ -117,7 +117,7 @@ h6::selection {
 
 .main-section__background {
     height: 120vh;
-    background-image: url('https://thestaub.com/wp-content/uploads/2023/11/Staub-cocotte-4-qt-2.jpg');
+    background-image: url('./assets/Staub-cocotte-4-qt-2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -575,7 +575,7 @@ h6::selection {
 /*SUBSCRIBE SECTION*/
 
 .subscribe__image-background {
-    background-image: url("https://thestaub.com/wp-content/uploads/2023/12/staub-cast-iron-5-qt-tall-cocotte-tout-2c4bf57a6eed40c88fea51e3ebe162d6.jpg");
+    background-image: url("./assets/staub-cast-iron-5-qt-tall-cocotte-tout-2c4bf57a6eed40c88fea51e3ebe162d6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
